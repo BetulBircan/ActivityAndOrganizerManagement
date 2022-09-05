@@ -1,9 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Activities;
+﻿
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Activities.Models;
-using Acitivity.ViewModels;
+using ActivitiesDataBase.Models;
+using AcitivityOrganizerManager.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Acitivity.Controllers { 
