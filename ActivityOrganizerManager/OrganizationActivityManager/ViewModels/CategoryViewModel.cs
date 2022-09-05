@@ -1,6 +1,6 @@
-﻿using Activities.Models;
+﻿using ActivitiesDataBase.Models;
 
-namespace Acitivity.ViewModels
+namespace AcitivityOrganizerManager.ViewModels
 {
     public class CategoryViewModel
     {
