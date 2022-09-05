@@ -1,5 +1,5 @@
-"# ActivityAndOrganizerManagement" 
-**Bu proje etkinliklere katılma ve organizasyonun bu etkinliği düzenleyebilmesi işlemleri için  oluşturuldu.**
+# ActivityAndOrganizerManagement
+**Bu proje etkinliklere katılma ve organizasyonun bu etkinliği düzenleyebilmesi işlemleri için oluşturuldu.**
 ## İsterler
 Projenin amacı, organizatörlerin etkinlik oluşturabildiği ve katılımcıların bu etkinlikleri görüp
 başvurabildiği bir online etkinlik yönetim sistemi oluşturmaktır.
@@ -75,3 +75,17 @@ Firmaların ne zaman sistemden etkinlikleri çektiği bilgisinin log kaydı tutu
 - Microsoft.AspNetCore.Authentication.JwtBearer
 
 ## Proje Açıklaması
+- İlk olarak ben veri tabanında gerekli olan tabloları oluşturdum ve daha sonra da `scaffold-dbcontext "Server=.;Database=Activities;Trusted_Connection=True" Microsoft.EntityFrameworkCore.SqlServer -Output:Models` yardımıyla Activities adlı Class Library ime Models klasörü altında ekledim.
+
+![2022-09-05](https://user-images.githubusercontent.com/86554799/188509084-2446a256-75aa-4211-84ee-16e12cb9785b.png)
+
+- Etkinlik ve organizasyon ekleme silme güncelleme vb için Controller klasörü, DTO(Data Transfer Object) nesneleri için ViewModels klaörü ve Kullanıcın şifresini harf ve rakam içermesi gibi belirli kurallar için Validators klasörleri oluşturuldum.
+
+- Sonrasında Şehir bilgilerinin eklenmesi, silinmesi ve güncellenmesi için ilk önce şehirin id ve isim bilgisini almak için CityViewModel sınıfını oluşturdum ve oraya ekledim. Daha sonra ise şehir eklemei silme ve güncelleme işlemlerini yapılması için CityController adında kontrol ekledim ve orada gerekli http metodları kullanarak işlemleri tamamladım.
+
+-  Aynı şekilde Kategori bilgilerinin eklenmesi, silinmesi ve güncellenmesi için ilk önce kategorinin id ve isim bilgisini almak için CategoryViewModel sınıfını oluşturdum ve oraya ekledim. Daha sonra ise kategori eklemei silme ve güncelleme işlemlerini yapılması için CategoryController adında kontrol ekledim ve orada gerekli http metodları kullanarak işlemleri tamamladım.
+
+- Kullanıcının kayıt olabilmesi için UserSignUpViewModel ile bilgileri alıp UserSignUpController ile de kayıt olma işlemini sağladım.
+
+
+
