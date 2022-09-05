@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivitiesDataBase", "ActivitiesDataBase\ActivitiesDataBase.csproj", "{77B14FC5-5905-4A88-A307-8DD529DD531F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrganizationActivityManager", "OrganizationActivityManager\OrganizationActivityManager.csproj", "{FCFCEACB-C4B4-437D-A841-1613DB7D707E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77B14FC5-5905-4A88-A307-8DD529DD531F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B14FC5-5905-4A88-A307-8DD529DD531F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B14FC5-5905-4A88-A307-8DD529DD531F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B14FC5-5905-4A88-A307-8DD529DD531F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFCEACB-C4B4-437D-A841-1613DB7D707E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFCEACB-C4B4-437D-A841-1613DB7D707E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFCEACB-C4B4-437D-A841-1613DB7D707E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFCEACB-C4B4-437D-A841-1613DB7D707E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

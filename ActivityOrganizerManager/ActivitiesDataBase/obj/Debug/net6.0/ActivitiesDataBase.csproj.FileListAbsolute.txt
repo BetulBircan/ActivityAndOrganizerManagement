@@ -1,0 +1,14 @@
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\bin\Debug\net6.0\ActivitiesDataBase.deps.json
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\bin\Debug\net6.0\ActivitiesDataBase.runtimeconfig.json
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\bin\Debug\net6.0\ActivitiesDataBase.dll
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\bin\Debug\net6.0\ActivitiesDataBase.pdb
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\obj\Debug\net6.0\ActivitiesDataBase.csproj.AssemblyReference.cache
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\obj\Debug\net6.0\ActivitiesDataBase.GeneratedMSBuildEditorConfig.editorconfig
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\obj\Debug\net6.0\ActivitiesDataBase.AssemblyInfoInputs.cache
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\obj\Debug\net6.0\ActivitiesDataBase.AssemblyInfo.cs
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\obj\Debug\net6.0\ActivitiesDataBase.csproj.CoreCompileInputs.cache
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\obj\Debug\net6.0\ActivitiesDataBase.dll
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\obj\Debug\net6.0\refint\ActivitiesDataBase.dll
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\obj\Debug\net6.0\ActivitiesDataBase.pdb
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\obj\Debug\net6.0\ActivitiesDataBase.genruntimeconfig.cache
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\ActivitiesDataBase\obj\Debug\net6.0\ref\ActivitiesDataBase.dll
