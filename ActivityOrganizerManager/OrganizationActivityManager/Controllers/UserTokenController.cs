@@ -15,12 +15,11 @@ namespace Acitivity.Controllers
     {
         
         [HttpPost]
-        public IActionResult GetToken(UserTokenViewModel user)
+        public IActionResult GetToken(UserMailPassword user)
         {
-            
 
-            if ((user.UserEmail == user.UserEmail) && (user.UserPassword == user.UserPassword) && user.RoleName == user.RoleName)
-            {
+
+            
                 
                 List<Claim> claims = new List<Claim>();
                 //claims.Add(new Claim("username",user.Username));
@@ -65,7 +64,7 @@ namespace Acitivity.Controllers
 
                 //string jwt = handler.WriteToken(token);
                 //return Ok(jwt);
-            }
+            
             return NotFound("Kullanıcı Bulunamadı");
         }
     }

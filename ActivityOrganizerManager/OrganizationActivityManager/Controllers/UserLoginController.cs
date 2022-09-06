@@ -20,17 +20,38 @@ namespace Acitivity.Controllers
                 return BadRequest(ModelState);
             }
 
-            Subscriber subscriber = new Subscriber();
-            Organizer organizer = new Organizer();
-
-            subscriber.UserEmail = user.UserEmail;
-            subscriber.UserPassword = user.UserPassword;
-
+            UserMailPassword login = new UserMailPassword();
+            login.UserEmail = user.UserEmail;
+            login.UserPassWord = user.UserPassword;
            
-            return BadRequest();
+            var subscribermail = context.Subscribers.Select(u => u.UserEmail);
+            var subscriberpassword = context.Subscribers.Select(u => u.UserPassword);
 
+            var organizermail = context.Organizers.Where(u => u.RoleId == 2).Select(u => u.UserEmail).ToList();
+            var organizerpassword = context.Organizers.Where(u => u.RoleId == 2).Select(u => u.UserPassword).ToList();
             
             
+
+            if (subscribermail.Equals(login.UserEmail) && subscriberpassword.Equals(login.UserPassWord) || (organizermail.Equals(login.UserEmail) && organizerpassword.Equals(login.UserPassWord)))
+            {
+                context.UserMailPasswords.Add(login);
+            }
+              
+            else
+            {
+                return NotFound("Kullanıcı Bulunamadı");
+            }
+
+
+
+            context.SaveChanges();
+            return Ok();
+
+
+
+
+
+
         }
     }
 }
