@@ -65,7 +65,7 @@ Firmaların ne zaman sistemden etkinlikleri çektiği bilgisinin log kaydı tutu
 
 ## Projede Kullanılan Teknolojiler
 - **VeriTabanı  :** MS SQL SERVER
-- ASP.NET CORE WEB API
+- ASP.NET CORE 6 WEB API
 - Microsost Entity Framework Core
 
 ## Projede İndirilen Paketler
@@ -86,6 +86,7 @@ Firmaların ne zaman sistemden etkinlikleri çektiği bilgisinin log kaydı tutu
 -  Aynı şekilde Kategori bilgilerinin eklenmesi, silinmesi ve güncellenmesi için ilk önce kategorinin id ve isim bilgisini almak için CategoryViewModel sınıfını oluşturdum ve oraya ekledim. Daha sonra ise kategori eklemei silme ve güncelleme işlemlerini yapılması için CategoryController adında kontrol ekledim ve orada gerekli http metodları kullanarak işlemleri tamamladım.
 
 - Kullanıcının kayıt olabilmesi için UserSignUpViewModel ile bilgileri alıp UserSignUpController ile de kayıt olma işlemini sağladım.
+- NOT : Projede eksiklikler devam etmekte olup güncellenmeye ve iyiliştirilmeye devam edilecek ve buradan da paylaşılmış olacaktır.
 
 
 
