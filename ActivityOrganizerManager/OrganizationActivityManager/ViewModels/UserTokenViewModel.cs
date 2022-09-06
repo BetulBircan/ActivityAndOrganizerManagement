@@ -1,4 +1,4 @@
-﻿namespace Acitivity.ViewModels
+﻿namespace AcitivityOrganizerManager.ViewModels
 {
     public class UserTokenViewModel
     {

@@ -57,16 +57,16 @@ namespace AcitivityOrganizerManager.Controllers {
             return Ok();
         }
 
-        [HttpDelete("{categoryID}")]
-        public IActionResult Delete(int categoryID)
+        [HttpDelete("{id}")]
+        public IActionResult Delete(byte id)
         {
             ActivitiesContext context = new ActivitiesContext();
-            Category category = context.Categories.Find(categoryID);
+            Category category = context.Categories.Find(id);
             context.Categories.Remove(category);
             context.SaveChanges();
 
-            //return NoContent();
-            return Ok();
+            return NoContent();
+           
         }
 
         

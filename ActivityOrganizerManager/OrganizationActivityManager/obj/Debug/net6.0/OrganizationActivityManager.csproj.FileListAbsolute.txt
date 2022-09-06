@@ -59,3 +59,7 @@ D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\Organizatio
 D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\OrganizationActivityManager\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\OrganizationActivityManager\bin\Debug\net6.0\ActivitiesDataBase.dll
 D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\OrganizationActivityManager\bin\Debug\net6.0\ActivitiesDataBase.pdb
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\OrganizationActivityManager\bin\Debug\net6.0\FluentValidation.dll
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\OrganizationActivityManager\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\OrganizationActivityManager\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\techcareercsharpodev\OrganizationManager\ActivityOrganizerManager\OrganizationActivityManager\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
