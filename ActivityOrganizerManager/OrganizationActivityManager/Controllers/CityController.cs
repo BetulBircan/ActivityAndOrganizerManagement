@@ -27,26 +27,26 @@ namespace OrganizationActivityManager.Controllers
             //return StatusCode(500, "Ürün eklenemedi");
         }
 
-        [HttpDelete("{cityID}")]
-        public IActionResult Delete(int cityID)
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
         {
 
-            City city = context.Cities.Find(cityID);
+            City city = context.Cities.Find(id);
             context.Cities.Remove(city);
             context.SaveChanges();
 
-            //return NoContent();
-            return Ok();
+            return NoContent();
+            //return Ok();
         }
 
         [HttpPut("{id}")] // idempotent
         public IActionResult UpdatePartial(int id, CityViewModel city)
         {
             City originalCity = context.Cities.Find(id);
-            originalCity.CityName = city.CityName;
+            originalCity.CityName = city.CityName.ToUpper();
             context.SaveChanges();
 
-            return Ok();
+            return Ok(originalCity);
         }
     }
 }
