@@ -54,7 +54,7 @@ namespace AcitivityOrganizerManager.Controllers {
             originalCategory.CategoryName = category.CategoryName.ToUpper();
             context.SaveChanges();
 
-            return Ok();
+            return Ok(originalCategory);
         }
 
         [HttpDelete("{id}")]

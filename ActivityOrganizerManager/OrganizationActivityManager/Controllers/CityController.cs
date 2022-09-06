@@ -27,6 +27,16 @@ namespace OrganizationActivityManager.Controllers
             //return StatusCode(500, "Ürün eklenemedi");
         }
 
+        [HttpPut("{id}")] // idempotent
+        public IActionResult UpdatePartial(int id, CityViewModel city)
+        {
+            City originalCity = context.Cities.Find(id);
+            originalCity.CityName = city.CityName.ToUpper();
+            context.SaveChanges();
+
+            return Ok(originalCity);
+        }
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -39,14 +49,6 @@ namespace OrganizationActivityManager.Controllers
             //return Ok();
         }
 
-        [HttpPut("{id}")] // idempotent
-        public IActionResult UpdatePartial(int id, CityViewModel city)
-        {
-            City originalCity = context.Cities.Find(id);
-            originalCity.CityName = city.CityName.ToUpper();
-            context.SaveChanges();
-
-            return Ok(originalCity);
-        }
+        
     }
 }
