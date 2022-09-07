@@ -5,8 +5,8 @@ using ActivitiesDataBase.Models;
 using AcitivityOrganizerManager.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 
-namespace AcitivityOrganizerManager.Controllers { 
-
+namespace AcitivityOrganizerManager.Controllers {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     

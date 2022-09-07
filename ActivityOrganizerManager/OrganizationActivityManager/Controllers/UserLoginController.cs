@@ -27,8 +27,8 @@ namespace Acitivity.Controllers
             var subscribermail = context.Subscribers.Select(u => u.UserEmail);
             var subscriberpassword = context.Subscribers.Select(u => u.UserPassword);
 
-            var organizermail = context.Organizers.Where(u => u.RoleId == 2).Select(u => u.UserEmail).ToList();
-            var organizerpassword = context.Organizers.Where(u => u.RoleId == 2).Select(u => u.UserPassword).ToList();
+            var organizermail = context.Organizers.Select(u => u.UserEmail);
+            var organizerpassword = context.Organizers.Select(u => u.UserPassword);
             
             
 
@@ -41,6 +41,8 @@ namespace Acitivity.Controllers
             {
                 return NotFound("Kullanıcı Bulunamadı");
             }
+
+
 
 
 

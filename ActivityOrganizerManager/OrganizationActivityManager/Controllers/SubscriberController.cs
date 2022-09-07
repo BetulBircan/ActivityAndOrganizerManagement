@@ -1,9 +1,11 @@
 ﻿using ActivitiesDataBase.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace OrganizationActivityManager.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class SubscriberController : ControllerBase

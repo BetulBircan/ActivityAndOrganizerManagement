@@ -5,6 +5,8 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//scaffold-dbcontext "Server = .; Database = Activities; Trusted_Connection=True" Microsoft.EntityFrameworkCore.SqlServer -Output:Models -Force
+
 // Add services to the container.
 
 builder.Services.AddControllers().AddFluentValidation(v => v.RegisterValidatorsFromAssemblyContaining<Program>()); ;

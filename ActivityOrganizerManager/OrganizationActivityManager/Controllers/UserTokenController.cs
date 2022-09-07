@@ -3,6 +3,7 @@ using ActivitiesDataBase.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -14,12 +15,27 @@ namespace Acitivity.Controllers
     public class UserTokenController : ControllerBase
     {
         
+        
         [HttpPost]
-        public IActionResult GetToken(UserMailPassword user)
+        public IActionResult GetToken(UserLoginViewModel user)
         {
+            ActivitiesContext context = new ActivitiesContext();
 
-
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             
+            UserMailPassword userMailPassword = new UserMailPassword();
+            userMailPassword.UserEmail = user.UserEmail;
+            userMailPassword.UserPassWord = user.UserPassword;
+
+            var query = context.Subscribers.Select(u => u.UserEmail);
+            var query2 = context.Subscribers.Select(u => u.UserPassword);
+
+
+            if ((query.Contains(userMailPassword.UserEmail) && (query2.Contains(userMailPassword.UserPassWord))))
+            {
                 
                 List<Claim> claims = new List<Claim>();
                 //claims.Add(new Claim("username",user.Username));
@@ -64,7 +80,7 @@ namespace Acitivity.Controllers
 
                 //string jwt = handler.WriteToken(token);
                 //return Ok(jwt);
-            
+            }
             return NotFound("Kullanıcı Bulunamadı");
         }
     }
