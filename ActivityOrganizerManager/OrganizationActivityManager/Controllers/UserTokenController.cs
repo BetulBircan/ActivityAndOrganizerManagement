@@ -42,7 +42,7 @@ namespace Acitivity.Controllers
                 claims.Add(new Claim(ClaimTypes.Email, user.UserEmail));
 
                
-                claims.Add(new Claim(JwtRegisteredClaimNames.UniqueName, user.UserEmail));
+                //claims.Add(new Claim(JwtRegisteredClaimNames.UniqueName, user.UserEmail));
                 claims.Add(new Claim(ClaimTypes.Role, "Katılımcı"));
                 claims.Add(new Claim(ClaimTypes.Role, "Organizatör"));
                 claims.Add(new Claim(ClaimTypes.Role, "Admin"));
