@@ -81,7 +81,21 @@ Firmaların ne zaman sistemden etkinlikleri çektiği bilgisinin log kaydı tutu
 
 - Etkinlik ve organizasyon ekleme silme güncelleme vb için Controller klasörü, DTO(Data Transfer Object) nesneleri için ViewModels klaörü ve Kullanıcın şifresini harf ve rakam içermesi gibi belirli kurallar için Validators klasörleri oluşturuldum.
 
+![2022-09-06](https://user-images.githubusercontent.com/86554799/188594113-5bfac2af-18bc-45ac-a6b0-c860b8336e49.png)
+
 - Sonrasında Şehir bilgilerinin eklenmesi, silinmesi ve güncellenmesi için ilk önce şehirin id ve isim bilgisini almak için CityViewModel sınıfını oluşturdum ve oraya ekledim. Daha sonra ise şehir eklemei silme ve güncelleme işlemlerini yapılması için CityController adında kontrol ekledim ve orada gerekli http metodları kullanarak işlemleri tamamladım.
+
+**Ekleme**
+
+https://user-images.githubusercontent.com/86554799/188603809-acac595f-d148-4ff9-a501-4bd85031cc1a.mp4
+
+![2022-09-06 (3)](https://user-images.githubusercontent.com/86554799/188604320-2178d22a-1005-46b1-9f2f-22a410f0ae52.png)
+
+**Silme**
+
+**Güncelleme**
+
+
 
 -  Aynı şekilde Kategori bilgilerinin eklenmesi, silinmesi ve güncellenmesi için ilk önce kategorinin id ve isim bilgisini almak için CategoryViewModel sınıfını oluşturdum ve oraya ekledim. Daha sonra ise kategori eklemei silme ve güncelleme işlemlerini yapılması için CategoryController adında kontrol ekledim ve orada gerekli http metodları kullanarak işlemleri tamamladım.
 
