@@ -83,9 +83,20 @@ Firmaların ne zaman sistemden etkinlikleri çektiği bilgisinin log kaydı tutu
 
 ![2022-09-06](https://user-images.githubusercontent.com/86554799/188594113-5bfac2af-18bc-45ac-a6b0-c860b8336e49.png)
 
-- Sonrasında Şehir bilgilerinin eklenmesi, silinmesi ve güncellenmesi için ilk önce şehirin id ve isim bilgisini almak için CityViewModel sınıfını oluşturdum ve oraya ekledim. Daha sonra ise şehir eklemei silme ve güncelleme işlemlerini yapılması için CityController adında kontrol ekledim ve orada gerekli http metodları kullanarak işlemleri tamamladım.
+-İlk olarak Kullanıcının kayıt olabilmesi için Ad, Soyad, Mail, Şifre, Şifre Tekrar ve Rol bilgilerini alabilmek için [UserSignUpViewModel](https://github.com/BetulBircan/ActivityAndOrganizerManagement/blob/main/ActivityOrganizerManager/OrganizationActivityManager/ViewModels/UserSignUpViewModel.cs) sınıfını oluşturdum ve oraya ekledim. Sonrasında kayıt işlemi yapıp rolüne göre veri tablosuna kayıt edebilmesi içinse [UserSignUpController](https://github.com/BetulBircan/ActivityAndOrganizerManagement/blob/main/ActivityOrganizerManager/OrganizationActivityManager/Controllers/UserSignUpController.cs) adında bir controller oluşturdum ve gerekli http metodları kullanarak işlemleri tanımladım.
+
+**Kayıt Olma**
+
+![kullanıcıgirişi](https://user-images.githubusercontent.com/86554799/188990983-5611742d-2619-4440-83ea-797738a038ef.gif)
+
+![2022-09-07 (2)](https://user-images.githubusercontent.com/86554799/188992734-c925b244-dec1-4aed-b774-225fca74de10.png)
+
+
+-  Şehir bilgilerinin eklenmesi, silinmesi ve güncellenmesi için ilk önce şehirin id ve isim bilgisini alabilmek için [CityViewModel](https://github.com/BetulBircan/ActivityAndOrganizerManagement/blob/main/ActivityOrganizerManager/OrganizationActivityManager/ViewModels/CityViewModel.cs) sınıfını oluşturdum ve oraya ekledim. Daha sonra ise şehir eklemei silme ve güncelleme işlemlerini yapılması için [CityController](https://github.com/BetulBircan/ActivityAndOrganizerManagement/blob/main/ActivityOrganizerManager/OrganizationActivityManager/Controllers/CityController.cs) adında conntroller ekledim ve orada gerekli http metodları kullanarak işlemleri tamamladım.
 
 **Ekleme**
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/86554799/188993708-0b3b18a1-4038-4293-a8d6-26b0342d44f1.gif)
 
 https://user-images.githubusercontent.com/86554799/188603809-acac595f-d148-4ff9-a501-4bd85031cc1a.mp4
 
@@ -93,14 +104,63 @@ https://user-images.githubusercontent.com/86554799/188603809-acac595f-d148-4ff9-
 
 **Silme**
 
+![citysilme](https://user-images.githubusercontent.com/86554799/188968760-5f57ddd4-7976-43ae-b3ac-38266f64b52a.gif)
+
+![2022-09-06 (5)](https://user-images.githubusercontent.com/86554799/188993392-74a6ff55-4268-4ca1-8d98-c92eb2cbb140.png)
+
 **Güncelleme**
 
+![cityguncelleme](https://user-images.githubusercontent.com/86554799/188968845-22085b13-d1dd-41a1-bb1b-010664285e3f.gif)
+
+![2022-09-06 (6)](https://user-images.githubusercontent.com/86554799/188993420-35959ad6-a985-4362-ad08-9604b8bc24b1.png)
 
 
--  Aynı şekilde Kategori bilgilerinin eklenmesi, silinmesi ve güncellenmesi için ilk önce kategorinin id ve isim bilgisini almak için CategoryViewModel sınıfını oluşturdum ve oraya ekledim. Daha sonra ise kategori eklemei silme ve güncelleme işlemlerini yapılması için CategoryController adında kontrol ekledim ve orada gerekli http metodları kullanarak işlemleri tamamladım.
+-  Aynı şekilde Kategori bilgilerinin eklenmesi, silinmesi ve güncellenmesi için ilk önce kategorinin id ve isim bilgisini almak için [CategoryViewModel](https://github.com/BetulBircan/ActivityAndOrganizerManagement/blob/main/ActivityOrganizerManager/OrganizationActivityManager/ViewModels/CategoryViewModel.cs) sınıfını oluşturdum ve oraya ekledim. Daha sonra ise kategori eklemei silme ve güncelleme işlemlerini yapılması için [CategoryController](https://github.com/BetulBircan/ActivityAndOrganizerManagement/blob/main/ActivityOrganizerManager/OrganizationActivityManager/Controllers/CategoryController.cs) adında controller ekledim ve orada gerekli http metodları kullanarak işlemleri tamamladım.
 
-- Kullanıcının kayıt olabilmesi için UserSignUpViewModel ile bilgileri alıp UserSignUpController ile de kayıt olma işlemini sağladım.
+**Ekleme**
+
+![categoryekleme](https://user-images.githubusercontent.com/86554799/188986219-0175973e-bda5-4adc-810c-300e75d9b034.gif)
+
+![2022-09-06 (7)](https://user-images.githubusercontent.com/86554799/188992987-43a68d67-e1bd-4ae4-99b3-fc6e4f3be201.png)
+
+**Silme**
+
+![categorysilme](https://user-images.githubusercontent.com/86554799/188986288-1aed8ebf-7cba-4ef0-9818-764188bdd6fd.gif)
+
+![2022-09-06 (9)](https://user-images.githubusercontent.com/86554799/188992863-c9469e1f-c9cd-41d1-823c-7dca47a9bd84.png)
+
+**Güncelleme**
+
+![categoryguncelleme](https://user-images.githubusercontent.com/86554799/188986758-acce3aee-42b3-4582-9c50-9197e5a65e13.gif)
+
+![2022-09-06 (8)](https://user-images.githubusercontent.com/86554799/188992923-51696b7a-e5c7-4128-9d03-a481dd93de7f.png)
+
+- Etkinlik ekleme, silme ve güncelleyebilme işlemleri için ilk önce aktivitenin id, adı, gerçekleştirme, son başvuru tarihi ve açıklaması vb bilgileri alabilmesi için [ActivityViewModel](https://github.com/BetulBircan/ActivityAndOrganizerManagement/blob/main/ActivityOrganizerManager/OrganizationActivityManager/ViewModels/ActivityViewModel.cs) adında bir sınıf oluşturdum ve oraya ekledim. Daha sonra ekleme, silme ve güncelleme işlemlerini Organizatör gerçekleştirebileceği için [OrganizerController](https://github.com/BetulBircan/ActivityAndOrganizerManagement/blob/main/ActivityOrganizerManager/OrganizationActivityManager/Controllers/OrganizerController.cs) adında bir controller oluşturdum ve gerekli http metodları kullanarak işlemi tamamladım.
+
+**Ekleme**
+
+![2022-09-07 (5)](https://user-images.githubusercontent.com/86554799/188992437-51b0b31b-b0c1-47ae-8bdc-c045072ff76d.png)
+
+
+**Silme**
+
+![etkinlik silme](https://user-images.githubusercontent.com/86554799/188991597-482af07f-5cb9-48c6-ab74-2d0263c660c1.gif)
+
+![2022-09-07 (7)](https://user-images.githubusercontent.com/86554799/188992508-c524e0e5-f294-462e-8965-a4dd809f1415.png)
+
+
+**Güncelleme**
+
+![etkinlik güncelleme](https://user-images.githubusercontent.com/86554799/188991628-e5592e28-5600-44d5-ad5f-55eb42ada560.gif)
+
+![2022-09-07 (6)](https://user-images.githubusercontent.com/86554799/188992466-cd8cb7be-8c9e-4e62-8f72-b26de8dfc407.png)
+
+-Kullanıcın giriş yapabilmesi ve token alarak kullanıcının rollerine göre yetkilendirme yapabilmek için kullanıcının mail ve şifre bilgilerini alabilmek için [UserLoginViewModel](https://github.com/BetulBircan/ActivityAndOrganizerManagement/blob/main/ActivityOrganizerManager/OrganizationActivityManager/ViewModels/UserLoginViewModel.cs) adında bir sınıf oluşturdum. Sonrasında giriş yapabilme işlemleri için [UserTokenController](https://github.com/BetulBircan/ActivityAndOrganizerManagement/blob/main/ActivityOrganizerManager/OrganizationActivityManager/Controllers/UserTokenController.cs) adında bir cotroller oluşturdum ve gerekli http metodları kullanarak işlemi tamamladım.
+
+![Postman-2022-09-07-04-25-48](https://user-images.githubusercontent.com/86554799/188992174-f6b0aa11-eeeb-4971-894d-8ffcc5d085b8.gif)
+
 - NOT : Projede eksiklikler devam etmekte olup güncellenmeye ve iyiliştirilmeye devam edilecek ve buradan da paylaşılmış olacaktır.
+
 
 
 
