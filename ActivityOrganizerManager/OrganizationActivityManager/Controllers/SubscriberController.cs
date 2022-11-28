@@ -12,32 +12,20 @@ namespace OrganizationActivityManager.Controllers
     [ApiController]
     public class SubscriberController : ControllerBase, ISubscriber
     {
-        ActivitiesContext context = new ActivitiesContext();
+        private ActivitiesContext _context;
+        private readonly Activitiy _activity;
+        public SubscriberController()
+        {
+            _context = new ActivitiesContext();
+            _activity = new Activitiy();
+        }
+        
 
         [HttpGet]
         public IActionResult GetActivities()
         {
 
-
-            var query = context.Activitiys.ToList();
-
-
-            //var query = from a in context.Activitiys
-            //            join c in context.Categories on a.CategoryId equals c.CategoryId
-            //            join ci in context.Cities on a.CityId equals ci.CityId
-            //            join co in context.Companies on a.CompanyId equals co.CompanyId
-            //            select new
-            //            {
-            //                a.ActivityName,
-            //                a.ActivityDate,
-            //                a.ApplicationDeadline,
-            //                a.Description,
-            //                a.Quota,
-            //                c.CategoryName,
-            //                ci.CityName,
-            //                a.Isticked,
-            //                a.Company.CompanyName,
-            //            };
+            var query = _context.Activitiys.ToList();
 
             return Ok(query);
         }
@@ -47,25 +35,7 @@ namespace OrganizationActivityManager.Controllers
         {
            
 
-            var category = context.Activitiys.Where(x => x.CategoryId == categoryId).ToList();
-
-
-            //var query = from a in context.Activitiys
-            //            join c in context.Categories on a.CategoryId equals c.CategoryId
-            //            join ci in context.Cities on a.CityId equals ci.CityId
-            //            join co in context.Companies on a.CompanyId equals co.CompanyId
-            //            select new
-            //            {
-            //                a.ActivityName,
-            //                a.ActivityDate,
-            //                a.ApplicationDeadline,
-            //                a.Description,
-            //                a.Quota,
-            //                c.CategoryName,
-            //                ci.CityName,
-            //                a.Isticked,
-            //                a.Company.CompanyName,
-            //            };
+            var category = _context.Activitiys.Where(x => x.CategoryId == categoryId).ToList();
 
             return Ok(category);
         }
@@ -76,29 +46,12 @@ namespace OrganizationActivityManager.Controllers
         public IActionResult GetActivitiesByCity(int cityId)
         {
 
-
-            var query = context.Activitiys.Where(x => x.CityId == cityId).ToList();
-
-
-            //var query = from a in context.Activitiys
-            //            join c in context.Categories on a.CategoryId equals c.CategoryId
-            //            join ci in context.Cities on a.CityId equals ci.CityId
-            //            join co in context.Companies on a.CompanyId equals co.CompanyId
-            //            select new
-            //            {
-            //                a.ActivityName,
-            //                a.ActivityDate,
-            //                a.ApplicationDeadline,
-            //                a.Description,
-            //                a.Quota,
-            //                c.CategoryName,
-            //                ci.CityName,
-            //                a.Isticked,
-            //                a.Company.CompanyName,
-            //            };
+            var query = _context.Activitiys.Where(x => x.CityId == cityId).ToList();
 
             return Ok(query);
         }
+
+        
 
        
     }

@@ -13,7 +13,7 @@ namespace Acitivities.ViewModels
       
         public string UserPasswordAgain { get; set; } = null!;
 
-        public int RoleId { get; set; }
+        public byte RoleId { get; set; }
         
     }
 }

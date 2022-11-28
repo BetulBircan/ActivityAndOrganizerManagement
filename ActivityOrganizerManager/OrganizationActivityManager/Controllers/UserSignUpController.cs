@@ -10,12 +10,22 @@ namespace OrganizationActivityManager.Controllers
     [ApiController]
     public class UserSignUpController : ControllerBase
     {
-        ActivitiesContext context = new ActivitiesContext();
+        private ActivitiesContext _context;
+        private User _user;
+        private UserDetail _userDetail;
+
+        public UserSignUpController()
+        {
+            _context = new ActivitiesContext();
+            _user = new User();
+            _userDetail = new UserDetail();
+        }
+        
 
         [HttpGet]
         public IActionResult GetUserRole()
         {
-            var query = from role in context.UserRoles
+            var query = from role in _context.UserRoles
                         select role.RoleName;
 
             return Ok(query);
@@ -28,35 +38,21 @@ namespace OrganizationActivityManager.Controllers
             {
                 return BadRequest(ModelState);
             }
+            _user.UserEmail = user.UserEmail;
+            _user.UserPassword = user.UserPassword;
+            //user.RoleId = users.RoleId;
+            _context.Add(_user);
+            _context.SaveChanges();
+            return Ok(_user);
+            _userDetail.PasswordAgain = user.UserPasswordAgain;
+            _userDetail.UserName = user.UserName;
+            _userDetail.UserSurname = user.UserSurname;
+            _userDetail.UserId = user.UserId;
+            _userDetail.RoleId = user.RoleId;
+            _context.UserDetails.Add(_userDetail);
+            _context.SaveChanges();
+            return Ok(_userDetail);
 
-
-           User newUser = new User();
-            //newUser. = user.UserName;
-            //newUser.UserSurname = user.UserSurname;
-            //newUser.UserEmail = user.UserEmail;
-            //newUser.UserPassword = user.UserPassword;
-            //newUser.UserPasswordAgain = user.UserPasswordAgain;
-            //newUser.RoleId = user.RoleId;
-            //if (newUser.RoleId == 1)
-            //{
-            //    context.Users.Add(newUser);
-
-
-            //}
-            //User newOrganizer = new Organizer();
-            //newOrganizer.UserName = user.UserName;
-            //newOrganizer.UserSurname = user.UserSurname;
-            //newOrganizer.UserEmail = user.UserEmail;
-            //newOrganizer.UserPassword = user.UserPassword;
-            //newOrganizer.UserPasswordAgain = user.UserPasswordAgain;
-            //newOrganizer.RoleId = user.RoleId;
-            //if (newOrganizer.RoleId == 2)
-            //{
-            //    context.Users.Add(newOrganizer);
-            //}
-
-            context.SaveChanges();
-            return Ok();
         }
     }
 }
