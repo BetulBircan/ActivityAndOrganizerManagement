@@ -30,30 +30,30 @@ namespace OrganizationActivityManager.Controllers
             }
 
 
-            Subscriber newUser = new Subscriber();
-            newUser.UserName = user.UserName;
-            newUser.UserSurname = user.UserSurname;
-            newUser.UserEmail = user.UserEmail;
-            newUser.UserPassword = user.UserPassword;
-            newUser.UserPasswordAgain = user.UserPasswordAgain;
-            newUser.RoleId = user.RoleId;
-            if (newUser.RoleId == 1)
-            {
-                context.Subscribers.Add(newUser);
+           User newUser = new User();
+            //newUser. = user.UserName;
+            //newUser.UserSurname = user.UserSurname;
+            //newUser.UserEmail = user.UserEmail;
+            //newUser.UserPassword = user.UserPassword;
+            //newUser.UserPasswordAgain = user.UserPasswordAgain;
+            //newUser.RoleId = user.RoleId;
+            //if (newUser.RoleId == 1)
+            //{
+            //    context.Users.Add(newUser);
 
 
-            }
-            Organizer newOrganizer = new Organizer();
-            newOrganizer.UserName = user.UserName;
-            newOrganizer.UserSurname = user.UserSurname;
-            newOrganizer.UserEmail = user.UserEmail;
-            newOrganizer.UserPassword = user.UserPassword;
-            newOrganizer.UserPasswordAgain = user.UserPasswordAgain;
-            newOrganizer.RoleId = user.RoleId;
-            if (newOrganizer.RoleId == 2)
-            {
-                context.Organizers.Add(newOrganizer);
-            }
+            //}
+            //User newOrganizer = new Organizer();
+            //newOrganizer.UserName = user.UserName;
+            //newOrganizer.UserSurname = user.UserSurname;
+            //newOrganizer.UserEmail = user.UserEmail;
+            //newOrganizer.UserPassword = user.UserPassword;
+            //newOrganizer.UserPasswordAgain = user.UserPasswordAgain;
+            //newOrganizer.RoleId = user.RoleId;
+            //if (newOrganizer.RoleId == 2)
+            //{
+            //    context.Users.Add(newOrganizer);
+            //}
 
             context.SaveChanges();
             return Ok();

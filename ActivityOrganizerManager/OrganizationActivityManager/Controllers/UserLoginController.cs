@@ -25,15 +25,15 @@ namespace Acitivity.Controllers
             login.UserEmail = user.UserEmail;
             login.UserPassWord = user.UserPassword;
            
-            var subscribermail = context.Subscribers.Select(u => u.UserEmail);
-            var subscriberpassword = context.Subscribers.Select(u => u.UserPassword);
+            var subscribermail = context.Users.Select(u => u.UserEmail);
+            var subscriberpassword = context.Users.Select(u => u.UserPassword);
 
-            var organizermail = context.Organizers.Select(u => u.UserEmail);
-            var organizerpassword = context.Organizers.Select(u => u.UserPassword);
+            var organizermail = context.Users.Select(u => u.UserEmail);
+            //var organizerpassword = contextUsers.Select(u => u.UserPassword);
             
             
 
-            if (subscribermail.Equals(login.UserEmail) && subscriberpassword.Equals(login.UserPassWord) || (organizermail.Equals(login.UserEmail) && organizerpassword.Equals(login.UserPassWord)))
+            if (subscribermail.Equals(login.UserEmail) && subscriberpassword.Equals(login.UserPassWord) || (organizermail.Equals(login.UserEmail)))
             {
                 context.UserMailPasswords.Add(login);
             }

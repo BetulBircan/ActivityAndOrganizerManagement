@@ -31,11 +31,11 @@ namespace Acitivity.Controllers
             userMailPassword.UserEmail = user.UserEmail;
             userMailPassword.UserPassWord = user.UserPassword;
 
-            var query = context.Subscribers.Select(u => u.UserEmail);
-            var query2 = context.Subscribers.Select(u => u.UserPassword);
+            var query = context.Users.Select(u => u.UserEmail);
+            // query2 = contextUsers.Select(u => u.UserPassword);
 
 
-            if ((query.Contains(userMailPassword.UserEmail) && (query2.Contains(userMailPassword.UserPassWord))))
+            if ((query.Contains(userMailPassword.UserEmail)))
             {
                 
                 List<Claim> claims = new List<Claim>();
