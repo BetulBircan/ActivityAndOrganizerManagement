@@ -1,4 +1,4 @@
-﻿namespace Acitivities.ViewModels
+﻿namespace ActivitiesDataBase.ViewModels
 {
     public class UserTokenViewModel
     {

@@ -1,5 +1,6 @@
-﻿using AcitivityOrganizerManager.ViewModels;
+﻿
 using ActivitiesDataBase.Models;
+using ActivitiesDataBase.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;

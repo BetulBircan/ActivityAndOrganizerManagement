@@ -1,7 +1,8 @@
-﻿using AcitivityOrganizerManager.ViewModels;
+﻿
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ActivitiesDataBase.Models;
+using ActivitiesDataBase.ViewModels;
 
 namespace Acitivity.Controllers
 {

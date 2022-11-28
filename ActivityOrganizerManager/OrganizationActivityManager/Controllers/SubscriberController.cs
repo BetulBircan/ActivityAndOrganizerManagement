@@ -1,4 +1,4 @@
-﻿using AcitivityOrganizerManager.ViewModels;
+﻿
 using ActivitiesDataBase.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

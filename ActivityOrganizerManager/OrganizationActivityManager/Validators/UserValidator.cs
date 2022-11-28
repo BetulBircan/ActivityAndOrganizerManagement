@@ -1,8 +1,9 @@
 ﻿using FluentValidation;
-using OrganizationActivityManager.ViewModels;
+
 using ActivitiesDataBase.Models;
 using FluentValidation;
 using System.Text.RegularExpressions;
+using Acitivities.ViewModels;
 
 namespace OrganizationActivityManager.Validators
 {

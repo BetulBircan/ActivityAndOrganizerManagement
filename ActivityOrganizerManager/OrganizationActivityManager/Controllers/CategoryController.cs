@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ActivitiesDataBase.Models;
-using AcitivityOrganizerManager.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using ActivitiesDataBase.ViewModels;
 
 namespace AcitivityOrganizerManager.Controllers {
     [Authorize]

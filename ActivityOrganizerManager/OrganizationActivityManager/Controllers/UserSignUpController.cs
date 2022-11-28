@@ -1,7 +1,8 @@
-﻿using ActivitiesDataBase.Models;
+﻿using Acitivities.ViewModels;
+using ActivitiesDataBase.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using OrganizationActivityManager.ViewModels;
+
 
 namespace OrganizationActivityManager.Controllers
 {

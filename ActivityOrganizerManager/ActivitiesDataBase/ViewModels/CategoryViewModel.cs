@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ActivitiesDataBase.ViewModels
 {
-    internal class CategoryViewModel
+    public class CategoryViewModel
     {
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
     }
 }

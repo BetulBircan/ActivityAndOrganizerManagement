@@ -1,6 +1,6 @@
-﻿using AcitivityOrganizerManager.ViewModels;
+﻿using ActivitiesDataBase.ViewModels;
 using FluentValidation;
-using OrganizationActivityManager.ViewModels;
+
 
 namespace OrganizationActivityManager.Validators
 {
