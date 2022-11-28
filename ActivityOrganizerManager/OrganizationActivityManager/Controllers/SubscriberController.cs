@@ -1,4 +1,5 @@
 ﻿
+using ActivitiesBusiness.Abstract;
 using ActivitiesDataBase.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -9,7 +10,7 @@ namespace OrganizationActivityManager.Controllers
     //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class SubscriberController : ControllerBase
+    public class SubscriberController : ControllerBase, ISubscriber
     {
         ActivitiesContext context = new ActivitiesContext();
 

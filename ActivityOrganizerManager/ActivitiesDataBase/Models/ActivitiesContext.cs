@@ -20,8 +20,8 @@ namespace ActivitiesDataBase.Models
         public virtual DbSet<Category> Categories { get; set; } = null!;
         public virtual DbSet<City> Cities { get; set; } = null!;
         public virtual DbSet<Company> Companies { get; set; } = null!;
-        public virtual DbSet<Organizer> Organizers { get; set; } = null!;
-        public virtual DbSet<Subscriber> Subscribers { get; set; } = null!;
+        public virtual DbSet<User> Users { get; set; } = null!;
+        public virtual DbSet<UserDetail> UserDetails { get; set; } = null!;
         public virtual DbSet<UserMailPassword> UserMailPasswords { get; set; } = null!;
         public virtual DbSet<UserRole> UserRoles { get; set; } = null!;
 
@@ -30,7 +30,7 @@ namespace ActivitiesDataBase.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=.;Database=Activities;Trusted_Connection=True");
+                optionsBuilder.UseSqlServer("Server = .; Database = Activities; Trusted_Connection=True");
             }
         }
 
@@ -112,58 +112,37 @@ namespace ActivitiesDataBase.Models
                 entity.Property(e => e.WebSite).IsUnicode(false);
             });
 
-            modelBuilder.Entity<Organizer>(entity =>
+            modelBuilder.Entity<User>(entity =>
             {
-                entity.ToTable("Organizer");
+                entity.Property(e => e.UserEmail).IsUnicode(false);
 
-                entity.Property(e => e.UserEmail)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.Property(e => e.UserPassword).IsUnicode(false);
 
-                entity.Property(e => e.UserName)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.HasMany(d => d.Activities)
+                    .WithMany(p => p.Users)
+                    .UsingEntity<Dictionary<string, object>>(
+                        "UserActivity",
+                        l => l.HasOne<Activitiy>().WithMany().HasForeignKey("ActivityId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_UserActivity_Activitiy"),
+                        r => r.HasOne<User>().WithMany().HasForeignKey("UserId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_UserActivity_Users1"),
+                        j =>
+                        {
+                            j.HasKey("UserId", "ActivityId");
 
-                entity.Property(e => e.UserPassword)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
-
-                entity.Property(e => e.UserPasswordAgain)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.UserSurname)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.HasOne(d => d.Role)
-                    .WithMany(p => p.Organizers)
-                    .HasForeignKey(d => d.RoleId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Organizer_UserRole");
+                            j.ToTable("UserActivity");
+                        });
             });
 
-            modelBuilder.Entity<Subscriber>(entity =>
+            modelBuilder.Entity<UserDetail>(entity =>
             {
-                entity.ToTable("Subscriber");
+                entity.HasKey(e => e.UserId);
 
-                entity.Property(e => e.IsAgree)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.ToTable("UserDetail");
 
-                entity.Property(e => e.UserEmail)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                entity.Property(e => e.UserId).ValueGeneratedNever();
+
+                entity.Property(e => e.PasswordAgain).IsUnicode(false);
 
                 entity.Property(e => e.UserName)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.UserPassword)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
-
-                entity.Property(e => e.UserPasswordAgain)
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
@@ -172,10 +151,15 @@ namespace ActivitiesDataBase.Models
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Role)
-                    .WithMany(p => p.Subscribers)
+                    .WithMany(p => p.UserDetails)
                     .HasForeignKey(d => d.RoleId)
+                    .HasConstraintName("FK_UserDetail_UserRole");
+
+                entity.HasOne(d => d.User)
+                    .WithOne(p => p.UserDetail)
+                    .HasForeignKey<UserDetail>(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Users_UserRole");
+                    .HasConstraintName("FK_UserDetail_Users");
             });
 
             modelBuilder.Entity<UserMailPassword>(entity =>

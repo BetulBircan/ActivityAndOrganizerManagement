@@ -7,14 +7,12 @@ namespace ActivitiesDataBase.Models
     {
         public UserRole()
         {
-            Organizers = new HashSet<Organizer>();
-            Subscribers = new HashSet<Subscriber>();
+            UserDetails = new HashSet<UserDetail>();
         }
 
-        public int RoleId { get; set; }
+        public byte RoleId { get; set; }
         public string RoleName { get; set; } = null!;
 
-        public virtual ICollection<Organizer> Organizers { get; set; }
-        public virtual ICollection<Subscriber> Subscribers { get; set; }
+        public virtual ICollection<UserDetail> UserDetails { get; set; }
     }
 }

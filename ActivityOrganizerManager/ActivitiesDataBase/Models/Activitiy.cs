@@ -5,6 +5,11 @@ namespace ActivitiesDataBase.Models
 {
     public partial class Activitiy
     {
+        public Activitiy()
+        {
+            Users = new HashSet<User>();
+        }
+
         public int ActivityId { get; set; }
         public string ActivityName { get; set; } = null!;
         public DateTime? ActivityDate { get; set; }
@@ -21,5 +26,7 @@ namespace ActivitiesDataBase.Models
         public virtual Category Category { get; set; } = null!;
         public virtual City City { get; set; } = null!;
         public virtual Company? Company { get; set; }
+
+        public virtual ICollection<User> Users { get; set; }
     }
 }

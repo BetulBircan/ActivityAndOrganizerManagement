@@ -12,7 +12,5 @@ namespace ActivitiesDataBase.Models
         public string UserPassword { get; set; } = null!;
         public string UserPasswordAgain { get; set; } = null!;
         public int RoleId { get; set; }
-
-        public virtual UserRole Role { get; set; } = null!;
     }
 }
