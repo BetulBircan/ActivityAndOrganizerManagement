@@ -6,7 +6,7 @@ using OrganizationActivityManager.ViewModels;
 
 namespace OrganizationActivityManager.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CityController : ControllerBase

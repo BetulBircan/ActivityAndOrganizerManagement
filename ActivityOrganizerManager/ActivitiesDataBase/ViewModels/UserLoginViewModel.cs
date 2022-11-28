@@ -1,4 +1,4 @@
-﻿namespace AcitivityOrganizerManager.ViewModels
+﻿namespace Acitivities.ViewModels
 {
     public class UserLoginViewModel
     {

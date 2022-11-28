@@ -4,6 +4,75 @@
     "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\OrganizationActivityManager\\OrganizationActivityManager.csproj": {}
   },
   "projects": {
+    "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesBusiness\\ActivitiesBusiness.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesBusiness\\ActivitiesBusiness.csproj",
+        "projectName": "ActivitiesBusiness",
+        "projectPath": "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesBusiness\\ActivitiesBusiness.csproj",
+        "packagesPath": "C:\\Users\\birca\\.nuget\\packages\\",
+        "outputPath": "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesBusiness\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\birca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesDataBase\\ActivitiesDataBase.csproj": {
+                "projectPath": "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesDataBase\\ActivitiesDataBase.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Build.Framework": {
+              "target": "Package",
+              "version": "[17.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesDataBase\\ActivitiesDataBase.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -67,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -95,6 +164,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesBusiness\\ActivitiesBusiness.csproj": {
+                "projectPath": "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesBusiness\\ActivitiesBusiness.csproj"
+              },
               "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesDataBase\\ActivitiesDataBase.csproj": {
                 "projectPath": "D:\\techcareercsharpodev\\OrganizationManager\\ActivityOrganizerManager\\ActivitiesDataBase\\ActivitiesDataBase.csproj"
               }
@@ -143,7 +215,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
